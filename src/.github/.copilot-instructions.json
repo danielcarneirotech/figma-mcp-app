@@ -1,0 +1,49 @@
+{
+  "reactBestPractices": {
+    "useFunctionalComponents": true,
+    "useHooks": ["useState", "useEffect", "useMemo"],
+    "accessibility": {
+      "ariaAttributes": true,
+      "roles": true,
+      "contrast": true
+    },
+    "styling": {
+      "cssModules": true,
+      "styledComponents": false
+    },
+    "performance": {
+      "lazyLoading": true,
+      "memoization": true
+    },
+    "codeConventions": {
+      "componentNaming": "PascalCase",
+      "eslintPrettier": true
+    }
+  },
+  "mcpIntegration": {
+    "figma": {
+      "authentication": "envVarOrMCP",
+      "designMapping": {
+        "colors": "src/styles/colors.ts",
+        "fonts": "Roboto",
+        "spacing": "padding, margin"
+      },
+      "componentGeneration": {
+        "directoryStructure": {
+          "base": "src/components/<ComponentName>",
+          "files": ["index.tsx", "styles.module.css", "types.ts", "__tests__/<ComponentName>.test.tsx"]
+        },
+        "jsxStructure": {
+          "containers": true,
+          "text": true,
+          "images": true,
+          "icons": true
+        },
+        "styling": "cssModules",
+        "props": "typed",
+        "tests": "reactTestingLibrary"
+      }
+    }
+  },
+  "updateOnEveryPrompt": true
+}
